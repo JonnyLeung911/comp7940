@@ -98,7 +98,10 @@ def main():
     # dispatcher.add_handler(CommandHandler('start', start))
     dispatcher.add_handler(CommandHandler('save_hiking_route_description', hiking_route_sharing.save_hiking_route_description))
     dispatcher.add_handler(CommandHandler('share_hiking_route', hiking_route_sharing.share_hiking_route))
-
+    
+# To start the bot:
+    updater.start_polling()
+    updater.idle()
 
 def photo(update, context):
     if (context.args is None or len(context.args) == 0):
