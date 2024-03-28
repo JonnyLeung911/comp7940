@@ -30,7 +30,6 @@ def main():
     config = configparser.ConfigParser()
     config.read('config.ini')
     updater = Updater(token=(config['TELEGRAM']['ACCESS_TOKEN']), use_context=True)
-    # updater = Updater(token=(os.environ['ACCESS_TOKEN']),  use_context=True)
     dispatcher = updater.dispatcher
     # 设置Menu菜单
     commands = [BotCommand('/start', '开始上传图片'), BotCommand('/start_video', '开始上传视频')]
